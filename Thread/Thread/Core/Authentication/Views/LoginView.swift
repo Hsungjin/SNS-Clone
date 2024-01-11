@@ -11,6 +11,7 @@ struct LoginView: View {
     // MARK: - PROPERTY
     @State private var email = ""
     @State private var password = ""
+    @StateObject var viewModel = LoginViewModel()
     
     // MARK: - BODY
     var body: some View {
@@ -26,11 +27,11 @@ struct LoginView: View {
                     .padding()
                 
                 VStack {
-                    TextField("email 주소를 입력해주세요", text: $email)
+                    TextField("email 주소를 입력해주세요", text: $viewModel.email)
                         .autocapitalization(.none)
                         .modifier(TextFieldModifier())
                     
-                    SecureField("비밀번호를 입력해주세요", text: $password)
+                    SecureField("비밀번호를 입력해주세요", text: $viewModel.password)
                         .modifier(TextFieldModifier())
                 }
                 
@@ -46,7 +47,9 @@ struct LoginView: View {
                 }
                 
                 Button {
-                    
+                    Task {
+                        try await viewModel.login()
+                    }
                 } label: {
                     Text("로그인")
                         .font(.subheadline)
