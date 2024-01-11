@@ -9,10 +9,8 @@ import SwiftUI
 
 struct RegistrationView: View {
     // MARK: - PROPERTY
-    @State private var email = ""
-    @State private var password = ""
-    @State private var fullname = ""
-    @State private var username = ""
+    @StateObject var viewModel = RegistrationViewModel()
+
     @Environment(\.dismiss) var dismiss
     
     // MARK: - BODY
@@ -28,21 +26,23 @@ struct RegistrationView: View {
                 .padding()
             
             VStack {
-                TextField("email 주소를 입력해주세요", text: $email)
+                TextField("email 주소를 입력해주세요", text: $viewModel.email)
                     .modifier(TextFieldModifier())
                 
-                SecureField("비밀번호를 입력해주세요", text: $password)
+                SecureField("비밀번호를 입력해주세요", text: $viewModel.password)
                     .modifier(TextFieldModifier())
                 
-                TextField("이름을 입력해주세요", text: $fullname)
+                TextField("이름을 입력해주세요", text: $viewModel.fullname)
                     .modifier(TextFieldModifier())
                 
-                TextField("닉네임을 입력해주세요", text: $username)
+                TextField("닉네임을 입력해주세요", text: $viewModel.username)
                     .modifier(TextFieldModifier())
             }
             
             Button {
-                
+                Task {
+                    try await viewModel.CreateUser()
+                }
             } label: {
                 Text("회왼가입")
                     .font(.subheadline)

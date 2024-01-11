@@ -23,7 +23,7 @@ struct ThreadApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

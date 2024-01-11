@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6476A2372B4FB03500F73262 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6476A2362B4FB03500F73262 /* RegistrationViewModel.swift */; };
+		6476A2392B4FB1E800F73262 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6476A2382B4FB1E800F73262 /* AuthService.swift */; };
 		6497CA592B4DB119001E466D /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6497CA582B4DB119001E466D /* CircularProfileImageView.swift */; };
 		6497CA5B2B4DB1E2001E466D /* Usercell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6497CA5A2B4DB1E2001E466D /* Usercell.swift */; };
 		6497CA5E2B4DB498001E466D /* ProfileThreadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6497CA5D2B4DB498001E466D /* ProfileThreadFilter.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6476A2362B4FB03500F73262 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewModel.swift; path = ../../../../../../../../Documents/RegistrationViewModel.swift; sourceTree = "<group>"; };
+		6476A2382B4FB1E800F73262 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6497CA582B4DB119001E466D /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		6497CA5A2B4DB1E2001E466D /* Usercell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usercell.swift; sourceTree = "<group>"; };
 		6497CA5D2B4DB498001E466D /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
@@ -80,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6476A2342B4FB01500F73262 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6476A2362B4FB03500F73262 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6476A2352B4FB01C00F73262 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6476A2382B4FB1E800F73262 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		6497CA572B4DB0F2001E466D /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +237,8 @@
 		64EE96EE2B4D16780059D2BE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				6476A2352B4FB01C00F73262 /* Service */,
+				6476A2342B4FB01500F73262 /* ViewModel */,
 				64EE96EF2B4D169F0059D2BE /* Views */,
 			);
 			path = Authentication;
@@ -416,7 +438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EE96FC2B4D21820059D2BE /* FeedView.swift in Sources */,
+				6476A2372B4FB03500F73262 /* RegistrationViewModel.swift in Sources */,
 				64EE96F12B4D16B10059D2BE /* LoginView.swift in Sources */,
+				6476A2392B4FB1E800F73262 /* AuthService.swift in Sources */,
 				6497CA622B4DB98F001E466D /* EditProfileView.swift in Sources */,
 				64EE96F62B4D1D320059D2BE /* TextFieldModifier.swift in Sources */,
 				64EE970F2B4D231B0059D2BE /* ThreadCell.swift in Sources */,
