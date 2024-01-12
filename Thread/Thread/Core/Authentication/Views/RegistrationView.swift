@@ -38,6 +38,7 @@ struct RegistrationView: View {
                     .modifier(TextFieldModifier())
                 
                 TextField("닉네임을 입력해주세요", text: $viewModel.username)
+                    .autocapitalization(.none)
                     .modifier(TextFieldModifier())
             }
             
