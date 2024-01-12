@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     // MARK: - PROPERTY
     @State private var selectedFilter: ProfileThreadFilter = .threads
+    @StateObject var viewModel = ProfileViewModel()
     @Namespace var animation
     
     private var filterBarWidth: CGFloat {
@@ -27,7 +28,7 @@ struct ProfileView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             // fullname and username
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("길동이")
+                                Text(viewModel.currentUser?.id ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 

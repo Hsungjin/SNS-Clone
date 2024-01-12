@@ -27,6 +27,8 @@ struct RegistrationView: View {
             
             VStack {
                 TextField("email 주소를 입력해주세요", text: $viewModel.email)
+                // 텍스트 필드에 첫글자 영문 대문자 안넣게 처리
+                    .autocapitalization(.none)
                     .modifier(TextFieldModifier())
                 
                 SecureField("비밀번호를 입력해주세요", text: $viewModel.password)
