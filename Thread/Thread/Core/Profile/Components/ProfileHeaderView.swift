@@ -41,7 +41,7 @@ struct ProfileHeaderView: View {
             } //: VSTACK
             Spacer()
             
-            CircularProfileImageView()
+            CircularProfileImageView(user: user, size: .medium)
         } //: HSTACK
     }
 }
