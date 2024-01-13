@@ -33,6 +33,8 @@
 		64D0E7242B53358000060A73 /* CureentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0E7232B53358000060A73 /* CureentUserProfileView.swift */; };
 		64D0E7282B53384000060A73 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0E7272B53384000060A73 /* ProfileHeaderView.swift */; };
 		64D0E72A2B533A3200060A73 /* UserContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0E7292B533A3200060A73 /* UserContentView.swift */; };
+		64D0E72D2B534AAA00060A73 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0E72C2B534AAA00060A73 /* EditProfileViewModel.swift */; };
+		64D0E72F2B534C2900060A73 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0E72E2B534C2900060A73 /* ImageUploader.swift */; };
 		64EE96D92B4D15B30059D2BE /* ThreadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EE96D82B4D15B30059D2BE /* ThreadApp.swift */; };
 		64EE96DB2B4D15B30059D2BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EE96DA2B4D15B30059D2BE /* ContentView.swift */; };
 		64EE96DD2B4D15B70059D2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EE96DC2B4D15B70059D2BE /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		64D0E7232B53358000060A73 /* CureentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CureentUserProfileView.swift; sourceTree = "<group>"; };
 		64D0E7272B53384000060A73 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		64D0E7292B533A3200060A73 /* UserContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentView.swift; sourceTree = "<group>"; };
+		64D0E72C2B534AAA00060A73 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		64D0E72E2B534C2900060A73 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		64EE96D52B4D15B30059D2BE /* Thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EE96D82B4D15B30059D2BE /* ThreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadApp.swift; sourceTree = "<group>"; };
 		64EE96DA2B4D15B30059D2BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		6497CA5F2B4DB96B001E466D /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				64D0E72B2B534A9100060A73 /* ViewModel */,
 				6497CA602B4DB982001E466D /* View */,
 			);
 			path = EditProfile;
@@ -220,6 +225,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		64D0E72B2B534A9100060A73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64D0E72C2B534AAA00060A73 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		64EE96CC2B4D15B30059D2BE = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				6476A2422B5106FD00F73262 /* UserService.swift */,
+				64D0E72E2B534C2900060A73 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -528,6 +542,7 @@
 				64EE96F12B4D16B10059D2BE /* LoginView.swift in Sources */,
 				6476A2392B4FB1E800F73262 /* AuthService.swift in Sources */,
 				64D0E7202B532BDC00060A73 /* DevPreviewProvider.swift in Sources */,
+				64D0E72D2B534AAA00060A73 /* EditProfileViewModel.swift in Sources */,
 				6497CA622B4DB98F001E466D /* EditProfileView.swift in Sources */,
 				64EE96F62B4D1D320059D2BE /* TextFieldModifier.swift in Sources */,
 				6476A2432B5106FD00F73262 /* UserService.swift in Sources */,
@@ -539,6 +554,7 @@
 				64D0E71E2B532A1900060A73 /* ExploreViewModel.swift in Sources */,
 				64D0E7242B53358000060A73 /* CureentUserProfileView.swift in Sources */,
 				64EE96DB2B4D15B30059D2BE /* ContentView.swift in Sources */,
+				64D0E72F2B534C2900060A73 /* ImageUploader.swift in Sources */,
 				6497CA5E2B4DB498001E466D /* ProfileThreadFilter.swift in Sources */,
 				6476A23D2B4FB66800F73262 /* ContentViewModel.swift in Sources */,
 				6476A2462B51087600F73262 /* CurrentUserProfileViewModel.swift in Sources */,
