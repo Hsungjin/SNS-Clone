@@ -27,7 +27,15 @@ class UserService {
         let user = try snapshot.data(as: User.self)
         self.currentUser = user
         
-        print("DEBUG: User is \(user)")
+//        print("DEBUG: User is \(user)")
+    }
+    
+    // 자신을 제외한 다른 유저 정보를 가져오기
+    static func fetchUser() async throws -> [User] {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return [] }
+        let snapshot = try await Firestore.firestore().collection("users").getDocuments()
+        let users = snapshot.documents.compactMap{( try? $0.data(as: User.self) )}
+        return users.filter({$0.id != currentUid})
     }
     
     func reset() {
