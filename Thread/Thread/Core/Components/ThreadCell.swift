@@ -25,7 +25,7 @@ struct ThreadCell: View {
                         
                         Spacer()
                         
-                        Text("10분전")
+                        Text(thread.timpstamp.timestampString())
                             .font(.caption)
                             .foregroundStyle(Color(.systemGray3))
                         

@@ -41,7 +41,9 @@ struct CureentUserProfileView: View {
                     }
                     
                     // user content list view
-                    UserContentView()
+                    if let user = currentUser {
+                        UserContentView(user: user)
+                    }
 
                 } //: VSTACK
             } //: SCROLL

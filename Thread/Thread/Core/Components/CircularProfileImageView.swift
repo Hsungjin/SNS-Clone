@@ -18,7 +18,6 @@ enum ProfileImageSize {
     
     var dimension: CGFloat {
         switch self {
-            
         case .xxSmall: return 28
         case .xSmall: return 32
         case .small: return 40

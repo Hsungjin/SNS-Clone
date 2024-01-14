@@ -31,7 +31,7 @@ struct ProfileView: View {
                 }
                 
                 // user content list view
-                UserContentView()
+                UserContentView(user: user)
                 
             } //: VSTACK
         } //: SCROLL

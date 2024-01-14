@@ -21,4 +21,11 @@ struct ThreadService {
         
         return snapshot.documents.compactMap{( try? $0.data(as: Thread.self) )}
     }
+    
+    static func fetchUserThread(uid: String) async throws -> [Thread] {
+        let snapshot = try await Firestore.firestore().collection("threads").whereField("ownerUid", isEqualTo: uid).getDocuments()
+        
+        let threads = snapshot.documents.compactMap({ try? $0.data(as: Thread.self) })
+        return threads.sorted(by: { $0.timpstamp.dateValue() > $1.timpstamp.dateValue()})
+    }
 }

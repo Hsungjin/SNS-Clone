@@ -11,10 +11,15 @@ struct UserContentView: View {
     // MARK: - PROPERTY
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
+    @StateObject var viewModel: UserContentViewModel
     
     private var filterBarWidth: CGFloat {
         let count = CGFloat(ProfileThreadFilter.allCases.count)
         return UIScreen.main.bounds.width / count - 16
+    }
+    
+    init(user: User) {
+        self._viewModel = StateObject(wrappedValue: UserContentViewModel(user: user))
     }
     
     // MARK: - BODY
@@ -46,8 +51,8 @@ struct UserContentView: View {
                 } //: LOOP
             } //: HSTACK
             LazyVStack {
-                ForEach(0 ... 10, id: \.self) { thread in
-//                    ThreadCell()
+                ForEach(viewModel.threads) { thread in
+                    ThreadCell(thread: thread)
                 }
             } //: LAZYVSTACK
             .padding(.vertical, 8)
@@ -58,5 +63,5 @@ struct UserContentView: View {
 }
 
 #Preview {
-    UserContentView()
+    UserContentView(user: DevPreviewProvider.shared.user)
 }
