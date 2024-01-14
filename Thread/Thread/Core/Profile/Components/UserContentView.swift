@@ -47,7 +47,7 @@ struct UserContentView: View {
             } //: HSTACK
             LazyVStack {
                 ForEach(0 ... 10, id: \.self) { thread in
-                    ThreadCell()
+//                    ThreadCell()
                 }
             } //: LAZYVSTACK
             .padding(.vertical, 8)

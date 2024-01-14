@@ -26,7 +26,7 @@ struct CreateThreadView: View {
                     
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("길동이")
+                        Text(user?.username ?? "")
                             .fontWeight(.semibold)
                         
                         TextField("Start a thread...", text: $caption, axis: .vertical)
