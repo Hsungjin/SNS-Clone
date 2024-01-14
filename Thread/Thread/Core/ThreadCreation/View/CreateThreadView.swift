@@ -9,15 +9,20 @@ import SwiftUI
 
 struct CreateThreadView: View {
     // MARK: - PROPERTY
-    @State private var caption = ""
     @Environment(\.dismiss) var dismiss
+    @State private var caption = ""
+    @StateObject var viewModel = CreateThreadViewModel()
+    
+    private var user: User? {
+        return UserService.shared.currentUser
+    }
     
     // MARK: - BODY
     var body: some View {
         NavigationStack {
             VStack {
                 HStack(alignment: .top) {
-                    CircularProfileImageView(user: nil, size: .small)
+                    CircularProfileImageView(user: user, size: .small)
                     
                     
                     VStack(alignment: .leading, spacing: 4) {
@@ -61,7 +66,10 @@ struct CreateThreadView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        Task {
+                            try await viewModel.uploadThread(caption: caption)
+                            dismiss()
+                        }
                     } label: {
                         Text("Post")
                             .opacity(caption.isEmpty ? 0.5 : 1)
