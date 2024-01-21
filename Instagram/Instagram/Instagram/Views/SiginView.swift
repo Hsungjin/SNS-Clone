@@ -14,39 +14,44 @@ struct SiginView: View {
     
     // MARK: - BODY
     var body: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "camera")
-                .font(.system(size: 60, weight: .black, design: .monospaced))
-            
-            VStack(alignment: .leading) {
-                Text("Welcome Back")
-                    .font(.system(size: 32, weight: .heavy))
+        NavigationStack {
+            VStack(spacing: 20) {
+                Image(systemName: "camera")
+                    .font(.system(size: 60, weight: .black, design: .monospaced))
                 
-                Text("Signin To Continue")
-                    .font(.system(size: 16, weight: .medium))
-            }
-            
-            FormField(value: $email, icon: "envelope.fill", placeholder: "E-mail")
-            
-            FormField(value: $password, icon: "lock.fill", placeholder: "Password", isSecure: true)
-            
-            Button {
+                VStack(alignment: .leading) {
+                    Text("Welcome Back")
+                        .font(.system(size: 32, weight: .heavy))
+                    
+                    Text("Signin To Continue")
+                        .font(.system(size: 16, weight: .medium))
+                }
                 
-            } label: {
-                Text("Sign In")
-                    .font(.title)
-                    .modifier(ButtonModifiers())
-            }
-            
-            HStack {
-                Text("New?")
-                Text("Create an Acouunt.")
-                    .font(.system(size: 20, weight: .semibold))
-            }
-            
-        } //: VSTACK
-        .padding()
-    }
+                FormField(value: $email, icon: "envelope.fill", placeholder: "E-mail")
+                
+                FormField(value: $password, icon: "lock.fill", placeholder: "Password", isSecure: true)
+                
+                Button {
+                    
+                } label: {
+                    Text("Sign In")
+                        .font(.title)
+                        .modifier(ButtonModifiers())
+                }
+                
+                HStack {
+                    Text("New?")
+                    NavigationLink(destination: SiginView()) {
+                        Text("Create an Acouunt.")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundStyle(.black)
+                    }
+                }
+                
+            } //: VSTACK
+            .padding()
+        }
+    } //: NAVI
 }
 
 #Preview {

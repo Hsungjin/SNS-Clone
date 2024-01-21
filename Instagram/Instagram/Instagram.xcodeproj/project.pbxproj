@@ -14,6 +14,9 @@
 		64B42F2A2B5D429B005F6056 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F292B5D429B005F6056 /* FormField.swift */; };
 		64B42F2D2B5D6147005F6056 /* SiginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F2C2B5D6147005F6056 /* SiginView.swift */; };
 		64B42F2F2B5D7233005F6056 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F2E2B5D7233005F6056 /* ButtonModifiers.swift */; };
+		64B42F312B5D7468005F6056 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F302B5D7468005F6056 /* SignUpView.swift */; };
+		64B42F342B5D75FA005F6056 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F332B5D75FA005F6056 /* ImagePicker.swift */; };
+		64B42F362B5D80E1005F6056 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B42F352B5D80E1005F6056 /* PermissionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		64B42F292B5D429B005F6056 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		64B42F2C2B5D6147005F6056 /* SiginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginView.swift; sourceTree = "<group>"; };
 		64B42F2E2B5D7233005F6056 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
+		64B42F302B5D7468005F6056 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		64B42F332B5D75FA005F6056 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		64B42F352B5D80E1005F6056 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,10 @@
 		64B42F192B5D41B6005F6056 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				64B42F352B5D80E1005F6056 /* PermissionManager.swift */,
 				64B42F1A2B5D41B6005F6056 /* InstagramApp.swift */,
 				64B42F1C2B5D41B6005F6056 /* ContentView.swift */,
+				64B42F322B5D75DB005F6056 /* Utilities */,
 				64B42F2B2B5D6137005F6056 /* Views */,
 				64B42F282B5D4279005F6056 /* Component */,
 				64B42F1E2B5D41B8005F6056 /* Assets.xcassets */,
@@ -88,8 +96,17 @@
 			isa = PBXGroup;
 			children = (
 				64B42F2C2B5D6147005F6056 /* SiginView.swift */,
+				64B42F302B5D7468005F6056 /* SignUpView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		64B42F322B5D75DB005F6056 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				64B42F332B5D75FA005F6056 /* ImagePicker.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +182,10 @@
 				64B42F2A2B5D429B005F6056 /* FormField.swift in Sources */,
 				64B42F1D2B5D41B6005F6056 /* ContentView.swift in Sources */,
 				64B42F2F2B5D7233005F6056 /* ButtonModifiers.swift in Sources */,
+				64B42F342B5D75FA005F6056 /* ImagePicker.swift in Sources */,
 				64B42F1B2B5D41B6005F6056 /* InstagramApp.swift in Sources */,
+				64B42F312B5D7468005F6056 /* SignUpView.swift in Sources */,
+				64B42F362B5D80E1005F6056 /* PermissionManager.swift in Sources */,
 				64B42F2D2B5D6147005F6056 /* SiginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +323,8 @@
 				DEVELOPMENT_TEAM = KKR332Q2BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "A message that tells the user why the app is requesting access to the device’s camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "A message that tells the user why the app is requesting access to the device’s albume.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +354,8 @@
 				DEVELOPMENT_TEAM = KKR332Q2BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "A message that tells the user why the app is requesting access to the device’s camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "A message that tells the user why the app is requesting access to the device’s albume.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
